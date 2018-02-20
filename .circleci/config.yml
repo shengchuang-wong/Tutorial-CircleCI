@@ -7,4 +7,4 @@ jobs:
       - checkout
       - run: 
           name: Print out hello message
-          command: whatever
+          command: echo "A first hello"
