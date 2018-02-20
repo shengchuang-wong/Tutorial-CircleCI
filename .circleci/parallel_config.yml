@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  step_1:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: 
+          name: Print out first hello message
+          command: echo "A first hello"
+      - run:
+          name: Sleep for 1 seconds
+          command: sleep 1
+  step_2:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: 
+          name: Print out second hello message
+          command: echo "A second hello"
+      - run:
+          name: Sleep for 2 seconds
+          command: sleep 2
+workflows:
+  version: 2
+  first_and_second:
+    jobs:
+      - step_2
+      - step_1
