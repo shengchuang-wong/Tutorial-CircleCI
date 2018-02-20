@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: 
+          name: Print out hello message
+          command: echo "A first hello"
+      - run:
+          name: Sleep for 3 seconds
+          command: sleep 3
