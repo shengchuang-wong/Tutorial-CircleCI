@@ -9,6 +9,5 @@ jobs:
           name: Print out hello message
           command: echo "A first hello"
       - run:
-          name: Slee for 25 milliseconds
-          command: sleep 25
-
+          name: Sleep for 3 seconds
+          command: sleep 3
